@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-angular-templates": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-purifycss": "latest"
+  },
+  "author": "Pranav Jindal",
+  "license": "MIT"
+}

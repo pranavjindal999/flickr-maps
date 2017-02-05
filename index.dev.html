@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="flickr-maps">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta name="theme-color" content="YOUR_WEBSITE_COLOR_CODE">
+    <title>Flickr Maps</title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="src/css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <script type="text/javascript" src="src/js/library/angular.js"></script>
+    <script type="text/javascript" src="src/js/library/angular-ui-router.js"></script>
+    <script type="text/javascript" src="src/js/app.config.js"></script>
+    <script type="text/javascript" src="src/js/modules/header/headerController.js"></script>
+    <script type="text/javascript" src="src/js/modules/home/homeController.js"></script>
+    <script type="text/javascript" src="src/js/services/service.js"></script>
+    <script type="text/javascript" src="src/js/directives/mapEmbed/mapEmbedDirective.js"></script>
+    <script type="text/javascript" src="src/js/directives/mapEmbed/mapApiService.js"></script>
+    <script type="text/javascript" src="src/js/directives/spinner/spinner.js"></script>
+    <script type="text/javascript" src="src/js/directives/imageViewer/imageViewerDirective.js"></script>
+</head>
+
+<body>
+    <header ui-view="header"></header>
+    <main ui-view="main"></main>
+    <footer ui-view="footer"></footer>
+    <image-viewer></image-viewer>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <map-embed cords="homeVm.cords"></map-embed>
+        </div>
+        <div class="col s12">
+            <div class="row center">
+                <br>
+                <div ng-show="!homeVm.isLoading">
+                    <div class="col s6 m3" ng-repeat="photo in homeVm.photos">
+                        <div class="card pointer" ng-click="homeVm.openImage(photo.url_large)">
+                            <div class="card-image">
+                                <img ng-src="{{photo.url}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <spinner ng-show="homeVm.isLoading"></spinner>
+            </div>
+            <div class="center">
+                <a class="waves-effect waves-light btn left" ng-click="homeVm.getNSetPhotos(homeVm.page-1)" ng-class="{'disabled' : homeVm.page==1||homeVm.isLoading}">
+                    <i class="material-icons left">keyboard_arrow_left</i>
+                    <span class="hide-on-small-only">Previous</span>
+                </a> {{homeVm.page}} of {{homeVm.pages}}
+                <a class="waves-effect waves-light btn right" ng-click="homeVm.getNSetPhotos(homeVm.page+1)" ng-class="{'disabled' : homeVm.page==homeVm.pages||homeVm.isLoading}">
+                    <i class="material-icons right">keyboard_arrow_right</i>
+                    <span class="hide-on-small-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
